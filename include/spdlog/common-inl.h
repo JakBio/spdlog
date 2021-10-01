@@ -13,8 +13,11 @@
 namespace spdlog {
 namespace level {
 
+#ifdef __CUDACC__
+#else
 #if __cplusplus >= 201703L
 constexpr
+#endif
 #endif
     static string_view_t level_string_views[] SPDLOG_LEVEL_NAMES;
 
